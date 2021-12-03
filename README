@@ -1,0 +1,51 @@
+GROUP MEMBERS:
+- Michael Cruz 
+- Kevin Dzwonkowski
+- Kyle Peiman
+
+FILES:
+- fat32.c: contains all of the functions to traverse, change, and get information from the FAT32 file system
+- structures.h: contains all the structures used in the file system to collect data
+- makefile: using the terminal command "make", this file will compile the project into an executable called project3
+
+CONTRIBUTIONS:
+- Michael Cruz
+	- BS_BPB struct 
+	- DIRENTRY struct
+	- FSINFO struct
+	- Files struct
+	- Document struct 
+	- Open_Files struct 
+	- void print_info()
+	- int ls(char* filename)
+	- int cd(char* filename)
+	- unsigned int get_size(const char* filename)
+	- unsigned int find_dir(const char* directory)
+	- int open_file(char* filename, char* mode)
+	- int close_file(char* filename)
+	- int read_file(char* filename, char* size)
+	- int write_file(char* filename, char* size, char* buff)
+	- void initialize_FAT(BS_BPB* bpb, FSInfo* file)	
+	- void initialize_env(Files* fileSys)			
+	- DIRENTRY* get_Entry(unsigned int clusNum)		
+	- unsigned int get_Sector(unsigned int clusNum)	
+	- unsigned int get_clusNum(unsigned int offset)
+	- void get_FAT(unsigned int* FAT)	
+	- void print_dir(unsigned int clus)
+	- Document* make_fileDescriptor(char* file, char* mode)
+	- int add_file(Document* file)
+	- Document* remove_file(char* filename)
+	- void print_openFiles()
+	- makefile
+	- README
+			
+- Kevin Dzwonkowski:
+	- int rm(char* filename)
+	- int our_lseek(char* filename, char * offset)
+- 
+
+- Kyle Peiman:
+	- int ls(char* filename)
+	- int cd(char* filename)
+	- void our_creat(char* filename)
+	- void mkdir(char* dirname)
